@@ -19,29 +19,28 @@
     transition: 0.6s;
    
 }
-.react:hover{
+.react{
 color: #26d8fb;
 }
-.node:hover{
+.node{
     color: #8dc550;
 }
-.mongodb:hover{
+.mongodb{
     color: #1b8833;
 }
-.express:hover{
+.express{
     color: #f1c210;
 }
-.word-press:hover{
+.word-press{
     color: #1f7398;
 }
-.mysql:hover{
+.mysql{
     color: #00628a;
 }
-.angular:hover{
-    
+.angular{
     color: #bd0630;
 }
-.postgres:hover{
+.postgres{
     color: #30638e;
 }
 /* .techno-stack:hover{

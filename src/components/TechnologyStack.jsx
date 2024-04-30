@@ -57,6 +57,10 @@ const TechnologyStack = () => {
                         <h4>Mongo Db</h4>
                       </div>
 
+                      <div className='techno-stack react'   >
+                        <FaReact />
+                        <h4>React Native</h4>
+                      </div>
                       
                       <div className='techno-stack express' >
                         <FaNodeJs/>

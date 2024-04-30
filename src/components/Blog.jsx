@@ -12,12 +12,14 @@ const Blog = () => {
 
     const sliderRef = useRef(null);
 
-    const handlePrev = () => {
-        sliderRef.current.swiper.slidePrev();
-    }
-    const handleNext = () => {
-        sliderRef.current.swiper.slideNext();
-    }
+
+    const list =[
+        {img:blogImage,date:"18/02/2024",name:"name",title:"blog title",creation:"Technology",description:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat voluptatum minima delectus iusto, veniam quo dolore sit incidunt exercitationem sed? Explicabo modi veniam ipsam magni optio, nihil reiciendis iusto earum."},
+        {img:blogImage,date:"18/02/2024",name:"name",title:"blog title",creation:"Technology",description:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat voluptatum minima delectus iusto, veniam quo dolore sit incidunt exercitationem sed? Explicabo modi veniam ipsam magni optio, nihil reiciendis iusto earum."},
+        {img:blogImage,date:"18/02/2024",name:"name",title:"blog title",creation:"Technology",description:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat voluptatum minima delectus iusto, veniam quo dolore sit incidunt exercitationem sed? Explicabo modi veniam ipsam magni optio, nihil reiciendis iusto earum."}
+
+    ]
+    
 
     return (
         <div className='blog-page'>
@@ -45,7 +47,40 @@ const Blog = () => {
                 }}
                 className="mySwiperTest"
             >
-                <SwiperSlide className='blog-slider'>
+            {
+                list.map((blogs)=>{
+                    return(
+                        <SwiperSlide className='blog-slider'>
+                        <div className='blog-clients'>
+    
+                            <div className='blog-image'>
+                                <img src={blogs.img} />
+                            </div>
+                           <div className='blog-header'>
+                           <div className='blog-date'>
+                            <span>{(blogs.date).split('/')[0]}</span>
+                            <spn>{ new Date((blogs.date).replace(/(\d{2})\/(\d{2})\/(\d{4})/, "$2-$1-$3")).toLocaleString('default', { month: 'short' })}</spn>
+                           </div>
+                            <h5>{blogs.name}</h5>
+                           </div>
+                             <h3>{blogs.title}</h3>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat voluptatum minima delectus iusto, veniam quo dolore sit incidunt exercitationem sed? Explicabo modi veniam ipsam magni optio, nihil reiciendis iusto earum.</p>
+    
+                            <div className='blog-logo-cont'>
+                                <span className='blog-logo'><FaTags/> <span>blog</span></span>
+                                <span className='blog-logo'><IoGitNetworkSharp/> <span>Technology</span></span>
+                            </div>
+    
+                            <div className='blog-btn'>
+                                <button>Read More</button>
+                            </div>
+                        </div>
+                    </SwiperSlide>
+                    )
+                })
+            }
+
+                {/* <SwiperSlide className='blog-slider'>
                     <div className='blog-clients'>
 
                         <div className='blog-image'>
@@ -70,9 +105,9 @@ const Blog = () => {
                             <button>Read More</button>
                         </div>
                     </div>
-                </SwiperSlide>
+                </SwiperSlide> */}
 
-                <SwiperSlide className='blog-slider'>
+                {/* <SwiperSlide className='blog-slider'>
                     <div className='blog-clients'>
 
                         <div className='blog-image'>
@@ -97,34 +132,7 @@ const Blog = () => {
                             <button>Read More</button>
                         </div>
                     </div>
-                </SwiperSlide>
-
-                <SwiperSlide className='blog-slider'>
-                    <div className='blog-clients'>
-
-                        <div className='blog-image'>
-                            <img src={blogImage} />
-                        </div>
-                       <div className='blog-header'>
-                       <div className='blog-date'>
-                        <span>18</span>
-                        <spn>JAN</spn>
-                       </div>
-                        <h5>Name</h5>
-                       </div>
-                         <h3>Blog Title</h3>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat voluptatum minima delectus iusto, veniam quo dolore sit incidunt exercitationem sed? Explicabo modi veniam ipsam magni optio, nihil reiciendis iusto earum.</p>
-
-                        <div className='blog-logo-cont'>
-                            <span className='blog-logo'><FaTags/> <span>blog</span></span>
-                            <span className='blog-logo'><IoGitNetworkSharp/> <span>Technology</span></span>
-                        </div>
-
-                        <div className='blog-btn'>
-                            <button>Read More</button>
-                        </div>
-                    </div>
-                </SwiperSlide>
+                </SwiperSlide> */}
             </Swiper>
         </div>
     )
