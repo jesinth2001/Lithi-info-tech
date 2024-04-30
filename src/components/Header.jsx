@@ -14,6 +14,7 @@ import { FaBarsStaggered } from "react-icons/fa6";
 const Header = () => {
  
    const [navbar,setNavbar]=useState(false)
+   const [isOpen,setIsOpen]=useState(false)
    const menuRef=useRef(null);
 
 
@@ -25,7 +26,18 @@ const Header = () => {
   console.log(navbar)
 
   const showMenu = ()=>{
-    menuRef.current.style.transform="translateY(0)";
+
+   
+    if(isOpen)
+    {
+    menuRef.current.classList.add('open-nav');
+    setIsOpen(false);
+    }
+    else{
+        menuRef.current.classList.remove('open-nav');
+        setIsOpen(true); 
+    }
+    
   }
 
   return (
