@@ -7,9 +7,10 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/pagination';
 import bgimage from "../Assets/section-bgimage2.png"
-
+import profile from "../Assets/profile.png"
 // import required modules
-import { Pagination } from 'swiper/modules';
+import { Autoplay, Pagination } from 'swiper/modules';
+import { GoStarFill } from "react-icons/go";
 
 const Testimonial = () => {
     const sliderRef=useRef(null);
@@ -37,8 +38,8 @@ const Testimonial = () => {
                         slidesPerView={3}
                         ref={sliderRef}
                         spaceBetween={30}
-                        
-                        modules={[Pagination]}
+                        autoplay={{ delay: 5000 }}
+                        modules={[Pagination,Autoplay]}
                         breakpoints={{
                             320: {
                               slidesPerView: 1,
@@ -55,12 +56,90 @@ const Testimonial = () => {
                           }}
                         className="mySwiperTest"
                     >
-                        <SwiperSlide className='slider-slider'>Slide 1</SwiperSlide>
-                        <SwiperSlide className='slider-slider'>Slide 1</SwiperSlide>
-                        <SwiperSlide className='slider-slider'>Slide 1</SwiperSlide>
-                        <SwiperSlide className='slider-slider'>Slide 1</SwiperSlide>
-                        <SwiperSlide className='slider-slider'>Slide 1</SwiperSlide>
-                        <SwiperSlide className='slider-slider'>Slide 1</SwiperSlide>
+                        <SwiperSlide className='slider-slider'>
+                            <div className='testimonial-clients'>
+                               
+                                <img src={profile}/>
+                                <h5>Name</h5>
+                                <div className='ratings'> 
+                                <span><GoStarFill/></span>
+                                <span><GoStarFill/></span>
+                                <span><GoStarFill/></span>
+                                <span><GoStarFill/></span>
+                                <span><GoStarFill/></span></div>
+                                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laboriosam nam quod inventore ullam consectetur facilis nulla nemo iste delectus temporibus?</p>
+                            </div>
+                        </SwiperSlide>
+                        <SwiperSlide className='slider-slider'>
+                        <div className='testimonial-clients'>
+                               
+                               <img src={profile}/>
+                               <h5>Name</h5>
+                               <div className='ratings'> 
+                               <span><GoStarFill/></span>
+                               <span><GoStarFill/></span>
+                               <span><GoStarFill/></span>
+                               <span><GoStarFill/></span>
+                               <span><GoStarFill/></span></div>
+                               <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laboriosam nam quod inventore ullam consectetur facilis nulla nemo iste delectus temporibus?</p>
+                           </div>
+                        </SwiperSlide>
+                        <SwiperSlide className='slider-slider'>
+                        <div className='testimonial-clients'>
+                               
+                               <img src={profile}/>
+                               <h5>Name</h5>
+                               <div className='ratings'> 
+                               <span><GoStarFill/></span>
+                               <span><GoStarFill/></span>
+                               <span><GoStarFill/></span>
+                               <span><GoStarFill/></span>
+                               <span><GoStarFill/></span></div>
+                               <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laboriosam nam quod inventore ullam consectetur facilis nulla nemo iste delectus temporibus?</p>
+                           </div>
+                        </SwiperSlide>
+                        <SwiperSlide className='slider-slider'>
+                        <div className='testimonial-clients'>
+                               
+                               <img src={profile}/>
+                               <h5>Name</h5>
+                               <div className='ratings'> 
+                               <span><GoStarFill/></span>
+                               <span><GoStarFill/></span>
+                               <span><GoStarFill/></span>
+                               <span><GoStarFill/></span>
+                               <span><GoStarFill/></span></div>
+                               <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laboriosam nam quod inventore ullam consectetur facilis nulla nemo iste delectus temporibus?</p>
+                           </div>
+                        </SwiperSlide>
+                        <SwiperSlide className='slider-slider'>
+                        <div className='testimonial-clients'>
+                               
+                               <img src={profile}/>
+                               <h5>Name</h5>
+                               <div className='ratings'> 
+                               <span><GoStarFill/></span>
+                               <span><GoStarFill/></span>
+                               <span><GoStarFill/></span>
+                               <span><GoStarFill/></span>
+                               <span><GoStarFill/></span></div>
+                               <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laboriosam nam quod inventore ullam consectetur facilis nulla nemo iste delectus temporibus?</p>
+                           </div>
+                        </SwiperSlide>
+                        <SwiperSlide className='slider-slider'>
+                        <div className='testimonial-clients'>
+                               
+                               <img src={profile}/>
+                               <h5>Name</h5>
+                               <div className='ratings'> 
+                               <span><GoStarFill/></span>
+                               <span><GoStarFill/></span>
+                               <span><GoStarFill/></span>
+                               <span><GoStarFill/></span>
+                               <span><GoStarFill/></span></div>
+                               <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laboriosam nam quod inventore ullam consectetur facilis nulla nemo iste delectus temporibus?</p>
+                           </div>
+                        </SwiperSlide>
                         
                     </Swiper>
             

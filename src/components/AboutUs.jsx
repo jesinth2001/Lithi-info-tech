@@ -10,8 +10,8 @@ const AboutUs = () => {
             <div className='wrapper-container'>
                 <section className='about-us'>
                     <div className='about-img-cont'>
-                        {/* <img src={about} /> */}
-                        <Lottie  style={{width:"80%" ,height:"100%"}} animationData={animationData}/>
+                        <img src={about} />
+                        {/* <Lottie  style={{width:"80%" ,height:"100%"}} animationData={animationData}/> */}
                     </div>
                     <div className='about-info'>
                         <div>

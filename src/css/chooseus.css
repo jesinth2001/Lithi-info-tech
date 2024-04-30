@@ -69,4 +69,17 @@
     .choose-us-cont{
         flex-direction: column-reverse;
     }
+    .choose-img-cont{
+        width: 100%;
+        height: 100%;
+    }
+    .choose-img-cont img{
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+    }
+    .choose-info{
+        width: 100%;
+        height: 100%;
+    }
 }
