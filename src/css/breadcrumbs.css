@@ -1,0 +1,13 @@
+.bread-crumb{
+    background-image:linear-gradient(rgba(0, 0, 0, 0.74),white);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height:400px;
+    font-size: 36px;
+    text-transform: capitalize;
+    color: white;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}

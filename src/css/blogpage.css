@@ -1,0 +1,6 @@
+.blog-det{
+    background-color: red;
+    width: min(90%,80.5rem);
+    margin-inline: auto;
+    height: 500px;
+}

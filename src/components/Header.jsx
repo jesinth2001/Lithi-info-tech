@@ -19,11 +19,11 @@ const Header = () => {
 
 
   const changeBackground = ()=>{
-  console.log(window.scrollY)
+ 
   window.scrollY>=10?setNavbar(true):setNavbar(false)
   }
   window.addEventListener('scroll',changeBackground)
-  console.log(navbar)
+
 
   const showMenu = ()=>{
 

@@ -4,22 +4,22 @@ import 'swiper/css';
 import 'swiper/css/pagination';
 import { Autoplay, Navigation, Pagination } from 'swiper/modules';
 import '../css/blog.css'
-import blogImage from '../Assets/blog/blog.jpg'
+
 import { FaTags } from "react-icons/fa6";
 import { IoGitNetworkSharp } from "react-icons/io5";
+import { useSelector } from 'react-redux';
+import { selectAll } from '../store/slices/blogSlices';
+import { useNavigate } from 'react-router-dom';
 
 const Blog = () => {
 
     const sliderRef = useRef(null);
+    const getBlog =useSelector(selectAll)||[]
+    const navigate =useNavigate()
 
-
-    const list =[
-        {img:blogImage,date:"18/02/2024",name:"name",title:"blog title",creation:"Technology",description:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat voluptatum minima delectus iusto, veniam quo dolore sit incidunt exercitationem sed? Explicabo modi veniam ipsam magni optio, nihil reiciendis iusto earum."},
-        {img:blogImage,date:"18/02/2024",name:"name",title:"blog title",creation:"Technology",description:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat voluptatum minima delectus iusto, veniam quo dolore sit incidunt exercitationem sed? Explicabo modi veniam ipsam magni optio, nihil reiciendis iusto earum."},
-        {img:blogImage,date:"18/02/2024",name:"name",title:"blog title",creation:"Technology",description:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat voluptatum minima delectus iusto, veniam quo dolore sit incidunt exercitationem sed? Explicabo modi veniam ipsam magni optio, nihil reiciendis iusto earum."}
-
-    ]
-    
+    const handleClick = (id) =>{
+        navigate(`/blog-details/${id}`)
+    }
 
     return (
         <div className='blog-page'>
@@ -48,7 +48,7 @@ const Blog = () => {
                 className="mySwiperTest"
             >
             {
-                list.map((blogs)=>{
+                getBlog.map((blogs)=>{
                     return(
                         <SwiperSlide className='blog-slider'>
                         <div className='blog-clients'>
@@ -65,14 +65,12 @@ const Blog = () => {
                            </div>
                              <h3>{blogs.title}</h3>
                             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat voluptatum minima delectus iusto, veniam quo dolore sit incidunt exercitationem sed? Explicabo modi veniam ipsam magni optio, nihil reiciendis iusto earum.</p>
-    
                             <div className='blog-logo-cont'>
                                 <span className='blog-logo'><FaTags/> <span>blog</span></span>
                                 <span className='blog-logo'><IoGitNetworkSharp/> <span>Technology</span></span>
                             </div>
-    
                             <div className='blog-btn'>
-                                <button>Read More</button>
+                                <button onClick={()=>{handleClick(blogs.id)}}>Read More</button>
                             </div>
                         </div>
                     </SwiperSlide>
