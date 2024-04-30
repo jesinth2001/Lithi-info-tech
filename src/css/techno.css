@@ -57,3 +57,10 @@ color: #26d8fb;
 .slick-slide{
     padding: 0rem  0px 1rem 0px;
  }
+
+ @media (max-width:767px) {
+    .techno-cont h1{
+        font-size: 1.5rem;
+    }
+    
+ }
