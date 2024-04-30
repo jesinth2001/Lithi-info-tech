@@ -1,0 +1,59 @@
+.techno{
+    padding: 0px 0px 3rem 0px;
+    background-color:white;
+    box-sizing: border-box;
+
+}
+.techno-cont h1{
+    text-align: center;
+    color:blue;
+    font-size: 3rem;
+    padding: 3rem 0px;
+    box-sizing: border-box;
+    
+}
+.techno-stack{
+    font-size: 100px;
+    color: gray;
+    text-align: center;
+    transition: 0.6s;
+   
+}
+.react:hover{
+color: #26d8fb;
+}
+.node:hover{
+    color: #8dc550;
+}
+.mongodb:hover{
+    color: #1b8833;
+}
+.express:hover{
+    color: #f1c210;
+}
+.word-press:hover{
+    color: #1f7398;
+}
+.mysql:hover{
+    color: #00628a;
+}
+.angular:hover{
+    
+    color: #bd0630;
+}
+.postgres:hover{
+    color: #30638e;
+}
+/* .techno-stack:hover{
+    color: var(--colorCode) !important;
+} */
+.techno-stack h4{
+    font-size: 18px;
+
+}
+.slider-cont{
+    padding: 3rem 0px;
+}
+.slick-slide{
+    padding: 0rem  0px 1rem 0px;
+ }

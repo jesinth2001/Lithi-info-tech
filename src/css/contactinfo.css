@@ -1,0 +1,58 @@
+.get-in-touch{
+    padding: 3rem 0px;
+
+}
+.get-in-touch h1{
+    text-align: center;
+    font-size: 3.5rem;
+    font-weight: 600;
+    
+}
+.get-in-touch p{
+    text-align: center;
+}
+.info-cont{
+ display: flex;
+ gap: 30px;
+ padding: 4rem 0px;
+
+}
+.info-cont >*{
+    flex: 1;
+}
+.floating-icon{
+ position: absolute;
+ background-color:  #0000c3;
+ color: white;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ width: 80px;
+ height: 80px;
+ outline: 10px solid white;
+ border-radius: 50%;
+ top: 0;
+font-size: 40px;
+ transform: translate(0%,-50%);
+}
+
+.info-card{
+    background-color:rgb(224, 224, 224);
+    border-radius: 4px;
+    position: relative;
+    text-align: center;
+}
+.info-card h3{
+    box-sizing: border-box;
+    padding: 1rem;
+    font-weight: 600;
+}
+.info-card p{
+padding: 1rem;
+}
+@media(max-width:767px){
+    .info-cont{
+        flex-direction: column;
+        gap: 70px;
+    }
+}
