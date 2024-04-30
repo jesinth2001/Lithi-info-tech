@@ -10,6 +10,7 @@ import WhyChooseUs from './WhyChooseUs'
 import Services from './Services'
 import Testimonial from './Testimonial'
 import Development from './Development'
+import Blog from './Blog'
 
 
 const Home = () => {
@@ -23,6 +24,7 @@ const Home = () => {
        <Development/>
        <Testimonial/>
        <TechnologyStack/>
+       <Blog />
        <ContactInfo/>
        <Contact/>
        <Footer/>
