@@ -22,7 +22,7 @@ const Blog = () => {
     }
 
     return (
-        <div className='blog-page'>
+        <div className='blog-page' id='blogs' data-aos="fade-down" >
             <h1 className='blog-tit'>Our Blogs</h1>
             <p className='blog-sub'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente, aliquid.</p>
             <Swiper
@@ -64,7 +64,7 @@ const Blog = () => {
                             <h5>{blogs.name}</h5>
                            </div>
                              <h3>{blogs.title}</h3>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat voluptatum minima delectus iusto, veniam quo dolore sit incidunt exercitationem sed? Explicabo modi veniam ipsam magni optio, nihil reiciendis iusto earum.</p>
+                            <p>{ blogs.description.length > 300 ? blogs.description.slice(0, 300) + "..." : blogs.description}</p>
                             <div className='blog-logo-cont'>
                                 <span className='blog-logo'><FaTags/> <span>blog</span></span>
                                 <span className='blog-logo'><IoGitNetworkSharp/> <span>Technology</span></span>

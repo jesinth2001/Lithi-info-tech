@@ -6,7 +6,7 @@ import Lottie from 'lottie-react'
 
 const AboutUs = () => {
     return (
-        <div className='about' data-aos="fade-up">
+        <div id="about" className='about' data-aos="fade-down" >
             <div className='wrapper-container'>
                 <section className='about-us'>
                     <div className='about-img-cont'>

@@ -15,3 +15,6 @@ h3,h4,button,p,input,span{
   padding: 0;
   margin: 0;
 }
+body{
+  scroll-behavior: smooth;
+}

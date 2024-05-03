@@ -1,7 +1,9 @@
 .about{
-    background-color: white;
+    background-color:white;
     box-sizing: border-box;
     padding:4rem 0px;
+    scroll-behavior: smooth;
+    
 }
 .about-us{
     display: flex;

@@ -5,7 +5,7 @@ import { MdOutlineSecurity } from "react-icons/md";
 
 const Services = () => {
     return (
-        <div className='services'>
+        <div className='services' id='services'  data-aos="fade-down">
             <div className='wrapper-container'>
                 <div className='service-card-cont'>
                     <div className='intro-card '>

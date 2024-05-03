@@ -9,7 +9,7 @@ import animationData from "../Assets/animation/whyus.json"
 const WhyChooseUs = () => {
     
   return (
-    <div className='choose-us'>
+    <div className='choose-us' data-aos="fade-down" >
         <div className='wrapper-container'>
             <div className='choose-us-cont'>
                 <div className='choose-info'> 

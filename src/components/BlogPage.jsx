@@ -8,6 +8,7 @@ import BreadCrumbs from './BreadCrumbs'
 import "../css/blogpage.css"
 import Contact from './Contact'
 import Footer from './Footer'
+import { Divider } from 'antd'
 
 
 const BlogPage = () => {
@@ -23,18 +24,48 @@ const BlogPage = () => {
     console.log("currentBlog",currentBlog)
     setBreadCrumbsTitle(currentBlog[0].title)
     setBlogs(currentBlog);
+    window.scrollTo(0, 0);
   },[])
+
+  console.log(blogs)
 
  
 
   return (
-    <div>
-      <Header/>
+    <div className='blogpage-main'>
+      <Header blog={true}/>
       <BreadCrumbs title={BreadCrumbsTitle}/>
       <div className='blog-det'>
+         {
+          blogs.map((blogs)=>{
+            return (<div className='blog-cont-blogpage'>
+              <img src={blogs.img}/>
+              <div className='blogpage-info'>
+              <h4 className='blogpage-info-blog'>{blogs.name}
+              <span>|</span>{ new Date(blogs.date.replace(/(\d{2})\/(\d{2})\/(\d{4})/, "$2/$1/$3")).toLocaleDateString("en-US", { month: "long", day: "numeric", year: "numeric" })}</h4>
+              <Divider style={{borderColor:" rgb(219, 219, 219",margin:"10px 0px",borderWidth:"2px"}}/>
+              <p>{blogs.description}</p>
+              </div>
+            
 
+            </div>)
+          })
+          
+         }
+               <div className='recent-blog'>
+                <div className='recent-blog-list'>
+                  <h3>Recent Posts</h3>
+                  {
+                    blogData.slice(-3).reverse().map((i)=>{
+                      return(<ul>
+                        <li>{i.title}</li>
+                      </ul>)
+                    })
+                  }
+                </div>
+               </div>
       </div>
-      <Contact/>
+      {/* <Contact/> */}
       <Footer/>
     </div>
   )

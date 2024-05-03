@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useRef } from 'react'
 import Header from './Header'
 import Landing from './Landing'
 import AboutUs from './AboutUs'
@@ -14,12 +14,16 @@ import Blog from './Blog'
 
 
 const Home = () => {
+
+
+
+
   return (
     <div>
        <Header/>
        <Landing/>
-       <AboutUs/>
-       <WhyChooseUs/>
+       <AboutUs />
+       <WhyChooseUs />
        <Services/>
        <Development/>
        <Testimonial/>

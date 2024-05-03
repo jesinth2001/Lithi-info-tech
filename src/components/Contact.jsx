@@ -7,7 +7,7 @@ import { RiMessage2Fill } from "react-icons/ri";
 
 const Contact = () => {
   return (
-    <div className='contact'>
+    <div className='contact' id='contact' data-aos="fade-down" >
         <div className='map'> 
         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3039.0228673086317!2d78.09631718205927!3d9.906431582740419!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b00cfdb501bbab3%3A0xec93ec2e6ea8771b!2sSRV%20Training%20Academy!5e0!3m2!1sen!2sin!4v1710767406584!5m2!1sen!2sin" width="100%" height="100%"  allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
