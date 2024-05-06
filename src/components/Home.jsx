@@ -11,11 +11,33 @@ import Services from './Services'
 import Testimonial from './Testimonial'
 import Development from './Development'
 import Blog from './Blog'
+import ChatBot from 'react-simple-chatbot';
+
+const steps = [
+  {
+    id: '0',
+    message: 'Welcome to Lithi  Info Tech',
+    trigger: '1',
+  },
+  {
+    id: '1',
+    message: 'How Can I Assist You?',
+    trigger:'2'
+  },
+  {
+    id: '2',
+    user:true,
+    trigger: '3'
+  },{
+    id: '3',
+    message: 'hi {previousValue},nice to meet you!',
+    end:true,
+  }
+
+];
 
 
 const Home = () => {
-
-
 
 
   return (
@@ -31,6 +53,7 @@ const Home = () => {
        <Blog />
        <ContactInfo/>
        <Contact/>
+       <ChatBot steps={steps} floating={true}/>
        <Footer/>
        
     </div>
