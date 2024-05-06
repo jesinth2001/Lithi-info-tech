@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { useParams } from 'react-router-dom'
+import { useNavigate, useParams } from 'react-router-dom'
 import Header from './Header'
 
 import { useSelector } from 'react-redux'
@@ -17,7 +17,10 @@ const BlogPage = () => {
   console.log("blogData  ",blogData ,"id ",id)
   const [blogs,setBlogs] =useState([])
   const [BreadCrumbsTitle,setBreadCrumbsTitle]=useState("")
+  const [activeBlog,setActiveBlog]=useState(false)
+  const nav =useNavigate()
 
+ 
 
    useEffect (()=>{
     const currentBlog = blogData.filter(item => item.id == parseInt(id));
@@ -25,10 +28,16 @@ const BlogPage = () => {
     setBreadCrumbsTitle(currentBlog[0].title)
     setBlogs(currentBlog);
     window.scrollTo(0, 0);
-  },[])
+    setActiveBlog(false)
+  },[activeBlog])
 
+  const handleBlogRecent =(id)=>{
+    nav(`/blog-details/${id}`)
+    setActiveBlog(true)
+  }
   console.log(blogs)
 
+ 
  
 
   return (
@@ -58,7 +67,8 @@ const BlogPage = () => {
                   {
                     blogData.slice(-3).reverse().map((i)=>{
                       return(<ul>
-                        <li>{i.title}</li>
+                        <li onClick={()=>{handleBlogRecent(i.id)}}>{i.title}</li>
+                     
                       </ul>)
                     })
                   }

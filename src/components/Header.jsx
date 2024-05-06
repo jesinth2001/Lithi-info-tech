@@ -14,7 +14,7 @@ import { FaBarsStaggered } from "react-icons/fa6";
 const Header = ({blog}) => {
  
    const [navbar,setNavbar]=useState(false)
-   const [isOpen,setIsOpen]=useState(false)
+   const [isOpen,setIsOpen]=useState(true)
    const menuRef=useRef(null);
 
 
