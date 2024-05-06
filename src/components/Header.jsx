@@ -45,7 +45,7 @@ const handleMenu =() =>{
     <div className={navbar||blog?"header active":"header"}>
         <div className='wrapper-container'>
             <div className='contact-info'style={{ display: navbar || blog ? "none" : "flex" }}>
-                <h4>9344399421 | sample@domain.com</h4>
+                <h4>8428339362 | sales@lithiinfotech.com</h4>
                 <ul className='icon-list'>
                     <li><a href='#'> <FaFacebookF/></a></li>
                     <li><a href='#'> <FaTwitter/></a></li>

@@ -5,8 +5,8 @@ import Slider from 'react-slick';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { DiMongodb } from "react-icons/di";
-import { FaNodeJs } from "react-icons/fa";
-import { SiMysql } from "react-icons/si";
+import { FaNodeJs, FaAws,FaEthereum   } from "react-icons/fa";
+import { SiMysql , SiDotnet } from "react-icons/si";
 import { FaAngular } from "react-icons/fa";
 import { FaWordpress } from "react-icons/fa";
 import { BiLogoPostgresql } from "react-icons/bi";
@@ -47,9 +47,21 @@ const TechnologyStack = () => {
                         <h4>React</h4>
                       </div>
 
+
+                      <div className='techno-stack postgres' >
+                        <SiDotnet  />
+                        <h4>.NET</h4>
+                      </div>
+                      
                       <div className='techno-stack node' >
                         <FaNodeJs/>
                         <h4>Node</h4>
+                      </div>
+
+
+                      <div className='techno-stack ' >
+                      <FaEthereum />
+                        <h4>ETHERS</h4>
                       </div>
 
                       <div className='techno-stack mongodb' >
@@ -67,7 +79,11 @@ const TechnologyStack = () => {
                         <h4>Express</h4>
                       </div>
 
-                      
+                      <div className='techno-stack '  >
+                      <FaAws />
+                        <h4>AWS</h4>
+                      </div>
+
                       <div className='techno-stack mysql'  >
                         <SiMysql/>
                         <h4>My Sql</h4>
